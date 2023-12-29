@@ -158,6 +158,11 @@ table {
     flex: 1;
 }
 
+.pen {
+    display: flex;
+    gap: 10px;
+}
+
 
 .head {
     font-size: 3rem;
@@ -174,8 +179,43 @@ table {
     border: 2px solid black;
     border-radius: 3px;
     color: rgb(0, 0, 0);
+    width: 15rem;
+    padding: 5px;
 }
 
 .btn:hover {
-    background-color: rgb(255, 122, 122);
+    font-size: 1.5rem;
+}
+
+.blackBtn {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-family: 'VT323', monospace;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    width: 10rem;
+}
+
+.blackBtn:hover {
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+}
+
+.colorBtn {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-family: 'VT323', monospace;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    width: 10rem;
+}
+
+.colorBtn:hover {
+    font-size: 1.5rem;
+    background-color: rgb(255, 87, 87);
 }

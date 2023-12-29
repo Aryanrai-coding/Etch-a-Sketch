@@ -24,12 +24,17 @@ function makeGrids(size) {
 document.addEventListener('DOMContentLoaded', function () {
     makeGrids(16);
     // Add event listeners to each row for the hover effect
-    let rows = document.querySelectorAll('.row');
-    rows.forEach(row => {
-        row.addEventListener('mouseenter', function () {
-            row.style.backgroundColor = "#000"; // Change to your desired hover color
+    let blackBtn = document.querySelector('.blackBtn');
+
+    blackBtn.addEventListener('click', () => {
+        let rows = document.querySelectorAll('.row');
+        rows.forEach(row => {
+            row.addEventListener('mouseenter', function () {
+                row.style.backgroundColor = "#000"; // Change to your desired hover color
+            });
         });
-    });
+    })
+
 });
 
 
@@ -59,3 +64,17 @@ btn.addEventListener('click', () => {
 
 })
 
+// For generating random colours
+let colorBtn = document.querySelector('.colorBtn');
+
+colorBtn.addEventListener('click', () => {
+    let rows = document.querySelectorAll('.row');
+    rows.forEach(row => {
+        row.addEventListener('mouseenter', () => {
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
+            row.style.backgroundColor = `rgb(${x},${y},${z})`;
+        })
+    })
+})
